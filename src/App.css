@@ -1,5 +1,15 @@
+@import "tailwindcss";
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+}
+body{
+  margin: 0;
+}
+.bottom-section::-webkit-scrollbar {
+  display: none;
+}
+.bottom-section {
+  -ms-overflow-style: none;  /* For Internet Explorer */
+  scrollbar-width: none;      /* For Firefox */
 }
