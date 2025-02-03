@@ -1,9 +1,22 @@
-import React from "react";
 import amazonLogo from "../../../assets/amazon_logo.png";
 import { IoSearchSharp } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
+  const categories = [
+    "All",
+    "Deals",
+    "Amazon Basics",
+    "Livestreams",
+    "Best Sellers",
+    "Music",
+    "Video",
+    "Books",
+    "Home",
+    "New Releases",
+  ];
   return (
     <>
       <div className="header-container hidden sm:block">
@@ -15,6 +28,7 @@ const Header = () => {
               name=""
               id=""
               className="w-full bg-white rounded-l-sm px-3"
+              placeholder="Search Amazon"
             />
             <span className="bg-[#fec76f] px-4 text-2xl py-2 cursor-pointer rounded-r-sm">
               <IoSearchSharp />
@@ -48,33 +62,55 @@ const Header = () => {
           </div>
           <div className="category-list flex items-center">
             <ul className=" text-white gap-5 font-bold flex items-center justify-center whitespace-nowrap">
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px] ">Deals</h6>
-              </li>
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px]">Amazon Basics</h6>
-              </li>
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px]">Livestreams</h6>
-              </li>
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px]">Best Sellers</h6>
-              </li>
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px]">Music</h6>
-              </li>
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px]">Video</h6>
-              </li>
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px]">Books</h6>
-              </li>
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px]">Home</h6>
-              </li>
-              <li className="cursor-pointer hover:underline">
-                <h6 className="font-bold text-[14px]">New Releases</h6>
-              </li>
+              {categories.map((item) => (
+                <li className="cursor-pointer hover:underline" key={item}>
+                  <h6 className="font-bold text-[14px] ">{item}</h6>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* Mobile Header */}
+      <div className="mobile-header-container bg-[#232f3f] block sm:hidden px-4 py-3">
+        <div className="top-section flex justify-between items-center">
+          <div className="menu text-white text-2xl flex gap-5">
+            <RxHamburgerMenu />
+            <img src={amazonLogo} alt="" className="logo" width={"100px"} />
+          </div>
+          <div className="user-cart flex gap-3">
+            <div className="user flex font-bold text-white gap-2">
+              <h5 className="">Sign in</h5>
+              <FaUserAlt className="text-xl" />
+            </div>
+            <span className="cart font-bold text-white">
+              <p className="text-sm/0 text-center">0</p>
+              <BiCart className="text-2xl" />
+            </span>
+          </div>
+        </div>
+        <div className="middle-section py-2">
+          <div className="flex justify-center align-middle w-full">
+            <input
+              type="text"
+              name=""
+              id=""
+              className="w-full bg-white rounded-l-sm px-3"
+              placeholder="Search Amazon"
+            />
+            <span className="bg-[#fec76f] px-4 text-2xl py-2 cursor-pointer rounded-r-sm">
+              <IoSearchSharp />
+            </span>
+          </div>
+        </div>
+        <div className="bottom-section pt-2 flex justify-start gap-5 overflow-x-scroll scroll-smooth md:overflow-x-hidden max-w-full overflow-y-hidden">
+          <div className="category-list flex items-center">
+            <ul className=" text-white gap-5 font-bold flex items-center justify-center whitespace-nowrap">
+              {categories.map((item) => (
+                <li className="cursor-pointer hover:underline" key={item}>
+                  <h6 className="font-bold text-[14px] ">{item}</h6>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
