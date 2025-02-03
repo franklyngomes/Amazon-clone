@@ -6,7 +6,6 @@ import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
   const categories = [
-    "All",
     "Deals",
     "Amazon Basics",
     "Livestreams",
@@ -57,8 +56,9 @@ const Header = () => {
           </nav>
         </div>
         <div className="bottom-section bg-[#232f3f] h-[45px] flex justify-start gap-5 px-4 overflow-x-scroll scroll-smooth md:overflow-x-hidden max-w-full overflow-y-hidden">
-          <div className="hamburger-menu flex items-center">
-            <h6 className="text-[14px] font-bold text-white">All</h6>
+          <div className="hamburger-menu flex justify-center items-center gap-1.5">
+            <RxHamburgerMenu className="text-white text-2xl " />
+            <h6 className="text-[14px]  text-white">All</h6>
           </div>
           <div className="category-list flex items-center">
             <ul className=" text-white gap-5 flex items-center justify-center whitespace-nowrap">
