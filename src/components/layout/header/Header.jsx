@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
       <div className="header-container hidden sm:block">
-        <div className="bg-[#1a1f25] flex justify-between items-center px-5 py-3">
+        <div className="bg-[#121921] flex justify-between items-center px-5 py-3">
           <img src={amazonLogo} alt="" className="logo" width={"100px"} />
           <div className="flex justify-center align-middle w-full px-10">
             <input
