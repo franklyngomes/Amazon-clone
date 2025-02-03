@@ -61,10 +61,10 @@ const Header = () => {
             <h6 className="text-[14px] font-bold text-white">All</h6>
           </div>
           <div className="category-list flex items-center">
-            <ul className=" text-white gap-5 font-bold flex items-center justify-center whitespace-nowrap">
+            <ul className=" text-white gap-5 flex items-center justify-center whitespace-nowrap">
               {categories.map((item) => (
                 <li className="cursor-pointer hover:underline" key={item}>
-                  <h6 className="font-bold text-[14px] ">{item}</h6>
+                  <h6 className="text-[14px] ">{item}</h6>
                 </li>
               ))}
             </ul>
@@ -105,10 +105,10 @@ const Header = () => {
         </div>
         <div className="bottom-section pt-2 flex justify-start gap-5 overflow-x-scroll scroll-smooth md:overflow-x-hidden max-w-full overflow-y-hidden">
           <div className="category-list flex items-center">
-            <ul className=" text-white gap-5 font-bold flex items-center justify-center whitespace-nowrap">
+            <ul className=" text-white gap-5 flex items-center justify-center whitespace-nowrap">
               {categories.map((item) => (
                 <li className="cursor-pointer hover:underline" key={item}>
-                  <h6 className="font-bold text-[14px] ">{item}</h6>
+                  <h6 className="text-[14px] ">{item}</h6>
                 </li>
               ))}
             </ul>
