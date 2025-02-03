@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.cdnfonts.com/css/amazon-ember");
+@import "tailwindcss";
 #root {
   margin: 0 auto;
   text-align: center;
